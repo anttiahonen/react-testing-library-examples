@@ -1,0 +1,17 @@
+{
+  "loading": "Loading...",
+  "foods": {
+    "noResults": "No foods available :( Sorry",
+    "button": {
+      "show": "Show me the foods, please",
+      "hide": "Hide the foods, I'm not hungry"
+    },
+    "tableHeaders": {
+      "dessert": "Dessert (100g serving)",
+      "calories": "Calories",
+      "fat": "Fat (g)",
+      "carbs": "Carbs (g)",
+      "protein": "Protein (g)"
+    }
+  }
+}

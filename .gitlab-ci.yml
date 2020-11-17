@@ -1,0 +1,34 @@
+image: node
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script: 
+    - echo "Start building App"
+    - npm install
+    - npm build
+    - echo "Build successfully!"
+  artifacts:
+    expire_in: 1 week
+    paths:
+    - build
+    - node_modules/
+  only:
+    - master
+
+test:
+  stage: test
+  script:
+    - echo "Testing App"
+    - npm install
+    - CI=true npm test
+    - echo "Test successfully!"
+  artifacts:
+    expire_in: 1 hour
+    paths:
+    - node_modules/
+  only:
+    - merge_requests
